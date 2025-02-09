@@ -11,8 +11,16 @@ import {
   Input,
 } from "@heroui/react";
 import { ChevronRightIcon } from "lucide-react";
+import { useEffect } from "react";
 
 export default function SignUp({ setUser, socket }) {
+  useEffect(() => {
+    const session = sessionStorage.getItem("user");
+    if (session) {
+      setUser(session);
+    }
+  }, []);
+
   const onSubmit = (e) => {
     // Prevent default browser page refresh.
     e.preventDefault();
@@ -21,6 +29,7 @@ export default function SignUp({ setUser, socket }) {
     const data = Object.fromEntries(new FormData(e.currentTarget));
 
     // Submit data to your backend API.
+    socket.emit("user", data.name);
     setUser(data.name);
 
     sessionStorage.setItem("user", data.name);
@@ -38,7 +47,7 @@ export default function SignUp({ setUser, socket }) {
             width={40}
           />
           <div className="flex flex-col">
-            <p className="text-md">MADE Room</p>
+            <p className="text-md">Yapster</p>
             <p className="text-small text-default-500">made.phleebs.tech</p>
           </div>
         </CardHeader>
@@ -69,7 +78,7 @@ export default function SignUp({ setUser, socket }) {
           <Link
             isExternal
             showAnchorIcon
-            href="https://github.com/shantanuuchak/made"
+            href="https://github.com/Animiiexe/yapster"
           >
             Visit source code on GitHub.
           </Link>
