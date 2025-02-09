@@ -47,7 +47,7 @@ export default function SignUp({ setUser, socket }) {
             width={40}
           />
           <div className="flex flex-col">
-            <p className="text-md">Yapster</p>
+            <p className="text-md">MADE Room</p>
             <p className="text-small text-default-500">made.phleebs.tech</p>
           </div>
         </CardHeader>
@@ -78,7 +78,7 @@ export default function SignUp({ setUser, socket }) {
           <Link
             isExternal
             showAnchorIcon
-            href="https://github.com/Animiiexe/yapster"
+            href="https://github.com/shantanuuchak/made"
           >
             Visit source code on GitHub.
           </Link>
