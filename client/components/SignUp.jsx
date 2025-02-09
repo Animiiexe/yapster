@@ -40,15 +40,15 @@ export default function SignUp({ setUser, socket }) {
       <Card className="max-w-[300px]">
         <CardHeader className="flex gap-3">
           <Image
-            alt="MADE room logo"
+            alt="yapster"
             height={40}
             radius="sm"
             src="favicon.ico"
             width={40}
           />
           <div className="flex flex-col">
-            <p className="text-md">MADE Room</p>
-            <p className="text-small text-default-500">made.phleebs.tech</p>
+            <p className="text-md">Yapster</p>
+            <p className="text-small text-default-500">a chat app</p>
           </div>
         </CardHeader>
 
@@ -78,7 +78,7 @@ export default function SignUp({ setUser, socket }) {
           <Link
             isExternal
             showAnchorIcon
-            href="https://github.com/shantanuuchak/made"
+            href="https://github.com/Animiiexe"
           >
             Visit source code on GitHub.
           </Link>
